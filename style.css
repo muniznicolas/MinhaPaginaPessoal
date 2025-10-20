@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --fonte-primaria: "Krona One", sans-serif;
+  --fonte-secundaria: "Montserrat", sans-serif;
+  --cor-primaria: #f6f6f6;
+  --cor-secundaria: #000000;
+  --cor-terciaria: #7C3AED;
+  --cor-hover: #5B21B6;
+  --gap-px: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
+  font-family: var(--fonte-primaria);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--cor-terciaria);
+  position: relative; /* para dropdown no mobile */
+}
+
+/* esconder o checkbox */
+#menu-toggle { display: none; }
+
+/* hamburguer escondido por padrão (só aparece <500px) */
+.menu-button { display: none; }
+
+.menu-button .line {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: var(--cor-terciaria);
+  border-radius: 3px;
+}
+.menu-button .line + .line { margin-top: 7px; }
+
+#main-menu { display: block; }
+#main-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+#main-menu a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+}
+#main-menu a:hover { color: var(--cor-terciaria); }
+
+/* IMAGEM VAI PARA O TOPO */
+@media (max-width: 1000px) {
+  .apresentacao {
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 24px;
+    padding: 32px 16px;
+  }
+  .apresentacao__conteudo,
+  .apresentacao__imagem {
+    width: 100%;
+  }
+  /* NADA no menu aqui: ele continua em linha */
+}
+
+@media (max-width: 500px) {
+  /* mostrar o ícone hambúrguer */
+  .menu-button { display: block; cursor: pointer; }
+
+  /* esconder o menu em mobile por padrão */
+  #main-menu {
+    display: none;
+    position: absolute;
+    top: 56px;         /* logo abaixo do header */
+    right: 16px;
+    min-width: 200px;
+    background: var(--cor-secundaria);
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 12px;
+    padding: 8px 0;
+    z-index: 10;
+  }
+  #main-menu ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  #main-menu li + li {
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  #main-menu a {
+    display: block;
+    padding: 10px 16px;
+  }
+
+  /* quando marcar o checkbox, abre o menu */
+  #menu-toggle:checked + .menu-button + #main-menu {
+    display: block;
+  }
+}
+
+
+
+.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-px);
+  padding: 6% 10%;
+}
+
+.apresentacao__conteudo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.apresentacao__conteudo__titulo {
+  font-family: var(--fonte-primaria);
+  font-size: 2.25rem;
+  /* rem */
+}
+
+.titulo-destaque {
+  color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.25rem;
+}
+
+.apresentacao__links {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-px);
+}
+
+.apresentacao__links__navegacao {
+  width: 48%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  background-color: var(--cor-terciaria);
+  padding: 2% 0;
+  border-radius: 1rem;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.apresentacao__links__navegacao:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-primaria);
+  cursor: pointer;
+  border-color: var(--cor-terciaria);
+}
+
+.apresentacao__imagem {
+  width: 40%;
+  border: 1px solid var(--cor-hover);
+  border-radius: 1rem;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4% 6%;
+  border-top: 1px solid var(--cor-hover);
+}
+
+.rodape__texto {
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+  /* rem */
+}
+
+@media (max-width: 900px) {
+  .apresentacao {
+    flex-direction: column;
+  }
+
+  .apresentacao__conteudo,
+  .apresentacao__imagem {
+    width: 100%;
+  }
+
+  .apresentacao__links {
+    gap: 16px;
+  }
+
+  /* px em gap */
+  .apresentacao__conteudo__titulo {
+    font-size: 2rem;
+  }
+
+  .apresentacao__conteudo__texto {
+    font-size: 1.125rem;
+  }
+}

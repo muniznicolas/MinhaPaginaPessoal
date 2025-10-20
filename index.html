@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicolas Muniz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+ <header>
+  <!-- interruptor invisível -->
+  <input type="checkbox" id="menu-toggle">
+
+  <!-- ícone hambúrguer (aparece só <500px) -->
+  <label for="menu-toggle" class="menu-button" aria-label="Abrir menu">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </label>
+
+  <!-- menu normal (inline no desktop/tablet) -->
+  <nav id="main-menu">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="sobre.html">Nova página</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="apresentacao" id="sobre">
+    <section class="apresentacao__conteudo">
+      <h1 class="apresentacao__conteudo__titulo">
+        Eleve seu projeto com um front-end
+        <strong class="titulo-destaque">simples, bonito e funcional</strong>
+      </h1>
+
+      <p class="apresentacao__conteudo__texto">
+        Olá! Sou <strong>Nicolas Muniz</strong>, Front-end (HTML, CSS e JS). Crio páginas leves e responsivas
+        para projetos acadêmicos e pequenos negócios. Vamos começar?
+      </p>
+
+      <nav class="apresentacao__links" aria-label="redes">
+        <a class="apresentacao__links__navegacao" href="https://instagram.com/nicolasamuniz" target="_blank" rel="noopener">Instagram</a>
+        <a class="apresentacao__links__navegacao" href="https://github.com/muniznicolas" target="_blank" rel="noopener">Github</a>
+      </nav>
+    </section>
+
+    <img class="apresentacao__imagem" src="img/MinhaFoto.jpeg" alt="Foto de Nicolas em frente ao notebook" />
+  </main>
+
+  <footer class="rodape" id="contato">
+    <p class="rodape__texto">©2025 Nicolas Muniz — Palmas/TO</p>
+  </footer>
+
+</body>
+</html>
