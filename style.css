@@ -187,9 +187,9 @@ header {
   justify-content: center;
   align-items: center;
   padding: 16px 8px;
-  background: var(--cor-terciaria);
-  color: var(--cor-secundaria);
-  font-family: var(--fonte-secundaria);
+  background: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  font-family: var(--fonte-primaria);
   font-size: 0.9rem;
   text-align: center;
   border-top: none; 
@@ -244,11 +244,4 @@ header {
   border: 2px solid var(--cor-terciaria);
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(124,58,237,0.2);
-}
-
-/* Footer com fundo roxo claro */
-.rodape {
-  background: var(--cor-terciaria);
-  color: var(--cor-secundaria);
-  border-top: none;
 }
