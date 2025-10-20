@@ -238,10 +238,3 @@ header {
   font-size: 1.1rem;
   line-height: 1.8;
 }
-
-/* Imagem com moldura roxa suave */
-.apresentacao__imagem {
-  border: 2px solid var(--cor-terciaria);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(124,58,237,0.2);
-}
